@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from "axios";
 import { getStoredAuthToken, removeStoredAuthToken } from "./authToken";
 import history from "./browserHistory";
 
-axios.defaults.baseURL = "https://localhost:3001/api/v1";
+axios.defaults.baseURL = "https://api.localhost:3001/api/v1";
 axios.defaults.headers.common["Authorization"] = getStoredAuthToken()
   ? `Bearer ${getStoredAuthToken()}`
   : undefined;

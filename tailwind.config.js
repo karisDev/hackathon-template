@@ -7,41 +7,40 @@ export default {
     screens: {
       md: "768px",
       lg: "1024px",
+      max: "1280px",
     },
     extend: {},
   },
   plugins: [
     tailwindThemer({
-      themes: [
-        {
-          name: "dark",
-          extend: {
-            colors: {
-              primary: "blue",
-              text: {
-                main: "#fafafa",
-              },
-              bg: {
-                primary: "#191919",
-              },
+      defaultTheme: {
+        name: "light",
+        extend: {
+          colors: {
+            primary: "blue",
+            text: {
+              main: "#282828",
+            },
+            bg: {
+              primary: "#F6F5FC",
+              nav: "#ffffff",
             },
           },
         },
-        {
-          name: "light",
-          extend: {
-            colors: {
-              primary: "red",
-              text: {
-                main: "#191919",
-              },
-              bg: {
-                primary: "#fafafa",
-              },
-            },
-          },
-        },
-      ],
+      },
+      // themes: [
+      //   {
+      //     name: "dark",
+      //     extend: {
+      //       colors: {
+      //         primary: "red",
+      //         bg: {
+      //           primary: "#191919",
+      //         },
+      //       },
+      //     },
+      //   },
+      // ],
     }),
   ],
 };

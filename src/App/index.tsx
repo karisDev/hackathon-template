@@ -1,16 +1,15 @@
-import Routes from "../shared/components/Routes";
-import { ThemeStore } from "../shared/stores";
+import Routes from "../shared/hoc/Routes";
 import "./base.css";
 import { observer } from "mobx-react-lite";
+import { ThemeStore } from "@/stores/themeStore";
 
 const App = observer(() => {
-  console.log(ThemeStore.theme);
   return (
-    <main
+    <div
       className={`${ThemeStore.theme} text-text-main bg-bg-primary w-full min-h-full flex flex-col`}
     >
       <Routes />
-    </main>
+    </div>
   );
 });
 
